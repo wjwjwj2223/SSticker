@@ -12,7 +12,58 @@
 		A00C107C247FC4E200A4172E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00C107A247FC4E200A4172E /* Main.storyboard */; };
 		A00C107E247FC4E300A4172E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00C107D247FC4E300A4172E /* Assets.xcassets */; };
 		A00C1081247FC4E300A4172E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00C107F247FC4E300A4172E /* LaunchScreen.storyboard */; };
+		A00C1089247FC50B00A4172E /* StickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C1088247FC50B00A4172E /* StickerViewController.swift */; };
+		A00C108D247FC53F00A4172E /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C108C247FC53F00A4172E /* StickerCell.swift */; };
+		A04A105E248164EE00682B64 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A1059248164EE00682B64 /* Alamofire.framework */; };
+		A04A105F248164EE00682B64 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A04A1059248164EE00682B64 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A04A1060248164EE00682B64 /* RLottieBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A105A248164EE00682B64 /* RLottieBinding.framework */; };
+		A04A1061248164EE00682B64 /* RLottieBinding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A04A105A248164EE00682B64 /* RLottieBinding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A04A1062248164EE00682B64 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A105B248164EE00682B64 /* SDWebImage.framework */; };
+		A04A1063248164EE00682B64 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A04A105B248164EE00682B64 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A04A10A324817A5100682B64 /* SSticker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A102B2481613600682B64 /* SSticker.framework */; };
+		A04A10A424817A5100682B64 /* SSticker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A04A102B2481613600682B64 /* SSticker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A04A102A2481613600682B64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A04A10252481613500682B64 /* SSticker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A04A0FDD24815DBE00682B64;
+			remoteInfo = SSticker;
+		};
+		A04A102C2481613600682B64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A04A10252481613500682B64 /* SSticker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A04A0FE624815DBE00682B64;
+			remoteInfo = SStickerTests;
+		};
+		A04A10A524817A5100682B64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A04A10252481613500682B64 /* SSticker.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A04A0FDC24815DBE00682B64;
+			remoteInfo = SSticker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A04A1036248161B500682B64 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A04A10A424817A5100682B64 /* SSticker.framework in Embed Frameworks */,
+				A04A1063248164EE00682B64 /* SDWebImage.framework in Embed Frameworks */,
+				A04A105F248164EE00682B64 /* Alamofire.framework in Embed Frameworks */,
+				A04A1061248164EE00682B64 /* RLottieBinding.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A00C1073247FC4E200A4172E /* SStickDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SStickDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +73,15 @@
 		A00C107D247FC4E300A4172E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A00C1080247FC4E300A4172E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A00C1082247FC4E300A4172E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A00C1088247FC50B00A4172E /* StickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerViewController.swift; sourceTree = "<group>"; };
+		A00C108C247FC53F00A4172E /* StickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerCell.swift; sourceTree = "<group>"; };
+		A00C10AC247FDBA100A4172E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		A04A0FA724810A4400682B64 /* SecretSticker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecretSticker.h; sourceTree = "<group>"; };
+		A04A0FA824810A4400682B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A04A10252481613500682B64 /* SSticker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSticker.xcodeproj; path = SSticker/SSticker.xcodeproj; sourceTree = "<group>"; };
+		A04A1059248164EE00682B64 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = SSticker/Framework/Alamofire.framework; sourceTree = "<group>"; };
+		A04A105A248164EE00682B64 /* RLottieBinding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RLottieBinding.framework; path = SSticker/Framework/RLottieBinding.framework; sourceTree = "<group>"; };
+		A04A105B248164EE00682B64 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = SSticker/Framework/SDWebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +89,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04A10A324817A5100682B64 /* SSticker.framework in Frameworks */,
+				A04A1062248164EE00682B64 /* SDWebImage.framework in Frameworks */,
+				A04A105E248164EE00682B64 /* Alamofire.framework in Frameworks */,
+				A04A1060248164EE00682B64 /* RLottieBinding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +102,14 @@
 		A00C106A247FC4E200A4172E = {
 			isa = PBXGroup;
 			children = (
+				A04A1059248164EE00682B64 /* Alamofire.framework */,
+				A04A105A248164EE00682B64 /* RLottieBinding.framework */,
+				A04A105B248164EE00682B64 /* SDWebImage.framework */,
+				A04A10252481613500682B64 /* SSticker.xcodeproj */,
 				A00C1075247FC4E200A4172E /* SStickDemo */,
+				A04A0FA624810A4400682B64 /* SecretSticker */,
 				A00C1074247FC4E200A4172E /* Products */,
+				A00C10AB247FDBA100A4172E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +126,40 @@
 			children = (
 				A00C1076247FC4E200A4172E /* AppDelegate.swift */,
 				A00C1078247FC4E200A4172E /* ViewController.swift */,
+				A00C1088247FC50B00A4172E /* StickerViewController.swift */,
+				A00C108C247FC53F00A4172E /* StickerCell.swift */,
 				A00C107A247FC4E200A4172E /* Main.storyboard */,
 				A00C107D247FC4E300A4172E /* Assets.xcassets */,
 				A00C107F247FC4E300A4172E /* LaunchScreen.storyboard */,
 				A00C1082247FC4E300A4172E /* Info.plist */,
 			);
 			path = SStickDemo;
+			sourceTree = "<group>";
+		};
+		A00C10AB247FDBA100A4172E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A00C10AC247FDBA100A4172E /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A04A0FA624810A4400682B64 /* SecretSticker */ = {
+			isa = PBXGroup;
+			children = (
+				A04A0FA724810A4400682B64 /* SecretSticker.h */,
+				A04A0FA824810A4400682B64 /* Info.plist */,
+			);
+			path = SecretSticker;
+			sourceTree = "<group>";
+		};
+		A04A10262481613500682B64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A04A102B2481613600682B64 /* SSticker.framework */,
+				A04A102D2481613600682B64 /* SStickerTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,10 +172,12 @@
 				A00C106F247FC4E200A4172E /* Sources */,
 				A00C1070247FC4E200A4172E /* Frameworks */,
 				A00C1071247FC4E200A4172E /* Resources */,
+				A04A1036248161B500682B64 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A04A10A624817A5100682B64 /* PBXTargetDependency */,
 			);
 			name = SStickDemo;
 			productName = SStickDemo;
@@ -96,6 +196,7 @@
 				TargetAttributes = {
 					A00C1072247FC4E200A4172E = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -110,12 +211,35 @@
 			mainGroup = A00C106A247FC4E200A4172E;
 			productRefGroup = A00C1074247FC4E200A4172E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A04A10262481613500682B64 /* Products */;
+					ProjectRef = A04A10252481613500682B64 /* SSticker.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A00C1072247FC4E200A4172E /* SStickDemo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A04A102B2481613600682B64 /* SSticker.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SSticker.framework;
+			remoteRef = A04A102A2481613600682B64 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A04A102D2481613600682B64 /* SStickerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SStickerTests.xctest;
+			remoteRef = A04A102C2481613600682B64 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A00C1071247FC4E200A4172E /* Resources */ = {
@@ -135,12 +259,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00C1089247FC50B00A4172E /* StickerViewController.swift in Sources */,
+				A00C108D247FC53F00A4172E /* StickerCell.swift in Sources */,
 				A00C1079247FC4E200A4172E /* ViewController.swift in Sources */,
 				A00C1077247FC4E200A4172E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A04A10A624817A5100682B64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSticker;
+			targetProxy = A04A10A524817A5100682B64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A00C107A247FC4E200A4172E /* Main.storyboard */ = {
@@ -213,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -281,9 +415,17 @@
 		A00C1086247FC4E300A4172E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9TRATUWJ7G;
+				DEVELOPMENT_TEAM = K7PT8BFN3J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/framework",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SSticker/Framework",
+				);
 				INFOPLIST_FILE = SStickDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -291,6 +433,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shengshi.wj.SStickDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,9 +443,17 @@
 		A00C1087247FC4E300A4172E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9TRATUWJ7G;
+				DEVELOPMENT_TEAM = K7PT8BFN3J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/framework",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/SSticker/Framework",
+				);
 				INFOPLIST_FILE = SStickDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +461,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shengshi.wj.SStickDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
