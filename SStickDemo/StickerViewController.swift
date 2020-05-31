@@ -10,7 +10,7 @@ import UIKit
 
 class StickerViewController: UIViewController {
     
-    lazy var collectionNode: UICollectionView = {
+    lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = .init(width: 80, height: 80)
         let node = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -30,12 +30,12 @@ class StickerViewController: UIViewController {
         btn.addTarget(self, action: #selector(StickerViewController.dismis), for: .touchUpInside)
         btn.setTitleColor(.black, for: .normal)
         self.view.addSubview(btn)
-        collectionNode.dataSource = self
-        collectionNode.delegate = self
-        collectionNode.frame = CGRect(x: 0, y: 100, width: view.bounds.width, height: view.bounds.height / 2)
-        collectionNode.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionNode.register(StickerCell.self, forCellWithReuseIdentifier: "StickerCellNode")
-        self.view.addSubview(self.collectionNode)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.frame = CGRect(x: 0, y: 100, width: view.bounds.width, height: view.bounds.height / 4)
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionView.register(StickerCell.self, forCellWithReuseIdentifier: "StickerCellNode")
+        self.view.addSubview(self.collectionView)
     }
     
     @objc func dismis() {
