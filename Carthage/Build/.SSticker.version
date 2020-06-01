@@ -1,9 +1,9 @@
 {
-  "commitish" : "be37663fd394f8b65263fac73edee00d2ddc3d24",
+  "commitish" : "7fa29d7c539e0cfe25e820c0fb15500cbff24abd",
   "iOS" : [
     {
       "name" : "SSticker",
-      "hash" : "0d168d9e0192ee7909e071e0ae9c228acebb54086efde7810895b1e372f070d5",
+      "hash" : "cd981407d103ef08bd2b43f9df643b53cbeaec833f5dc766fb1fda38285cd135",
       "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
     }
   ]
