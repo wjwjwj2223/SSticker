@@ -1,0 +1,6 @@
+framework module RLottieBinding {
+  umbrella header "RLottieBinding.h"
+
+  export *
+  module * { export * }
+}
