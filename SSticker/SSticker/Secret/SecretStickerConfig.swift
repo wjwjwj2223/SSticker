@@ -10,6 +10,7 @@ import Foundation
 
 let StickerStickerOriginPath = NSHomeDirectory() + "/Documents/Sticker/Origin"
 let StickerStickerGeneratePath = NSHomeDirectory() + "/Documents/Sticker/Generate"
+let StickerStickerPreViewPath = NSHomeDirectory() + "/Documents/Sticker/PreView"
 public let DefaultStickerWidth = 160
 
 

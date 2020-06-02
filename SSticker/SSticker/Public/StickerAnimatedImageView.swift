@@ -10,15 +10,21 @@ import UIKit
 import SDWebImage
 
 let decodeImageQueue = DispatchQueue(label: "decodeImageQueue")
-let firstFrameImageQueue = DispatchQueue(label: "firstFrameImageQueue")
+let firstFrameImageQueue = DispatchQueue(label: "firstFrameImageQueue", qos: DispatchQoS.userInitiated, attributes: .concurrent, autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency.workItem, target: nil)
+//let firstFrameImageQueue = DispatchQueue(label: "firstFrameImageQueue")
+//let generateCacheFileQueue = DispatchQueue(label: "generateCacheFileQueue", qos: DispatchQoS.background, attributes: .concurrent, autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency.workItem, target: nil)
+let generateCacheFileQueue = DispatchQueue(label: "generateCacheFileQueue")
+
 
 public class StickerAnimatedImageView: UIImageView {
     
     let queue = decodeImageQueue
     let ffQueue = firstFrameImageQueue
+    let fileQueue = generateCacheFileQueue
     private let timer = Atomic<STimer?>(value: nil)
     private var url: String?
     private var currentLoadPath: String?
+    private var currentPreViewPath: String?
 //    private var generateImageOperation: GenerateImageOperation?
     private var cachedData: Data?
     
@@ -72,29 +78,42 @@ public class StickerAnimatedImageView: UIImageView {
             
             self.currentLoadPath = with.absoluteString.generateShortPath(width: Int(size.stickerWidth), height: Int(size.stickerWidth))
             
-            guard let shortPath = currentLoadPath else {return}
-
-            if FileManager.default.fileExists(atPath: shortPath) {
-                self.ffQueue.async {
-                    self.playWithPath(shortPath, isFirstFrame: true)
-                }
+            self.currentPreViewPath = with.absoluteString.generatePreviewPath(width: Int(size.stickerWidth), height: Int(size.stickerWidth))
+            
+            guard let shortPath = currentLoadPath, let preViewPath = currentPreViewPath else {return}
+            
+            let existPreViewData = FileManager.default.fileExists(atPath: preViewPath)
+            let existShortData = FileManager.default.fileExists(atPath: shortPath)
+            
+            let ul = URL(fileURLWithPath: preViewPath)
+            if existPreViewData, let preData = try? Data(contentsOf: ul) {
+                self.image = UIImage(data: preData)
             }
             
-            self.queue.async {
-                if FileManager.default.fileExists(atPath: shortPath) {
+            if !existPreViewData && existShortData {
+                //缓存第一帧
+                self.playWithPath(shortPath, isFirstFrame: true)
+            }
+            
+            if existShortData {
+                self.queue.async {
                     self.playWithPath(shortPath)
-                } else {
-                    downloadResourceWith(with) { (origin , path) in
-                        guard self.url == origin else {return}
-                        let optionData = try? Data(contentsOf: URL(fileURLWithPath: path), options: [.mappedRead])
-                        guard let pData = optionData else {return}
-                        self.queue.async { [weak self] in
-                            guard let self = self else {return}
-                            experimentalConvertCompressedLottieToCombinedMp4(data: pData, size: CGSize(width: size.stickerWidth, height: size.stickerHeight), depath: shortPath, completion: { path in
-                                self.playWithPath(path)
-                            })
+                }
+                return
+            }
+            
+            downloadResourceWith(with) { [weak self] (origin , path) in
+                guard let self = self else {return}
+                guard self.url == origin else {return}
+                self.fileQueue.async { [weak self] in
+                    let optionData = try? Data(contentsOf: URL(fileURLWithPath: path), options: [.mappedRead])
+                    guard let pData = optionData else {return}
+                    guard let self = self else {return}
+                    experimentalConvertCompressedLottieToCombinedMp4(data: pData, size: CGSize(width: size.stickerWidth, height: size.stickerHeight), depath: shortPath, completion: { path in
+                        self.queue.async {
+                            self.playWithPath(path)
                         }
-                    }
+                    })
                 }
             }
         }
@@ -115,15 +134,6 @@ public class StickerAnimatedImageView: UIImageView {
         guard let frameSource = maybeFrameSource else {
             return
         }
-//        if let operation = generateImageOperation {
-//            print("operation--------重新赋值")
-//            operation.frameSource = frameSource
-//            operation.frameQueue = AnimatedStickerFrameQueue(queue: self.queue, length: 1, source: frameSource)
-//        } else {
-//            print("operation--------创建")
-//            generateImageOperation = GenerateImageOperation(queue:self.queue, imageView: self, frameSource: frameSource)
-//            generateImageQueue.addOperation(generateImageOperation!)
-//        }
         let frameQueue = QueueLocalObject<AnimatedStickerFrameQueue>(queue: self.queue, generate: {
             return AnimatedStickerFrameQueue(queue: self.queue, length: 1, source: frameSource)
         })
@@ -133,7 +143,7 @@ public class StickerAnimatedImageView: UIImageView {
             [weak self] in
             guard let self = self else {return}
             let frame = frameSource.takeFrame()
-            self.render(url: path, width: frame.width, height: frame.height, bytesPerRow: frame.bytesPerRow, data: frame.data)
+            self.render(url: path, width: frame.width, height: frame.height, bytesPerRow: frame.bytesPerRow, data: frame.data, isFirst: isFirstFrame)
             frameQueue.with { frameQueue in
                 frameQueue.generateFramesIfNeeded()
             }
@@ -142,7 +152,7 @@ public class StickerAnimatedImageView: UIImageView {
         timer.start()
     }
     
-    func render(url: String, width: Int, height: Int, bytesPerRow: Int, data: Data) {
+    func render(url: String, width: Int, height: Int, bytesPerRow: Int, data: Data, isFirst: Bool = false) {
         let calculatedBytesPerRow = (4 * Int(width) + 15) & (~15)
         assert(bytesPerRow == calculatedBytesPerRow)
         let image = generateImagePixel(CGSize(width: CGFloat(width), height: CGFloat(height)), scale: 1.0, pixelGenerator: { _, pixelData, bytesPerRow in
@@ -150,6 +160,14 @@ public class StickerAnimatedImageView: UIImageView {
                 decodeYUVAToRGBA(bytes, pixelData, Int32(width), Int32(height), Int32(bytesPerRow))
             }
         })
+        guard url == self.currentLoadPath, let ur = self.url else {return}
+        
+        if isFirst, let img = image, let data = img.pngData() {
+            let u = ur.generatePreviewPath(width: width, height: height)
+            let ul = URL(fileURLWithPath: u)
+            try? data.write(to: ul)
+        }
+        
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {return}
             guard url == self.currentLoadPath else {return}

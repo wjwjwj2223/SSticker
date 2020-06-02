@@ -10,10 +10,16 @@ import Foundation
 import CommonCrypto
 
 extension String {
-    // remote url
+    // short Path
     func generateShortPath(width: Int = DefaultStickerWidth, height: Int = DefaultStickerWidth) -> String {
         return StickerStickerGeneratePath + "/" + self.md5 + "_\(width)" + "_\(height)"
     }
+    
+    // preview Path
+    func generatePreviewPath(width: Int = DefaultStickerWidth, height: Int = DefaultStickerWidth) -> String {
+        return StickerStickerPreViewPath + "/" + self.md5 + "_\(width)" + "_\(height)"
+    }
+    
 }
 
 

@@ -18,6 +18,9 @@ private let DownlaodSessionManager: Session = {
     if !FileManager.default.fileExists(atPath: StickerStickerGeneratePath) {
         try? FileManager.default.createDirectory(atPath: StickerStickerGeneratePath, withIntermediateDirectories: true, attributes: [:])
     }
+    if !FileManager.default.fileExists(atPath: StickerStickerPreViewPath) {
+        try? FileManager.default.createDirectory(atPath: StickerStickerPreViewPath, withIntermediateDirectories: true, attributes: [:])
+    }
     return Session(
         configuration: configuration
     )
