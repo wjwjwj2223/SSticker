@@ -14,8 +14,6 @@
 		A00C1081247FC4E300A4172E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00C107F247FC4E300A4172E /* LaunchScreen.storyboard */; };
 		A00C1089247FC50B00A4172E /* StickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C1088247FC50B00A4172E /* StickerViewController.swift */; };
 		A00C108D247FC53F00A4172E /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C108C247FC53F00A4172E /* StickerCell.swift */; };
-		A04A105E248164EE00682B64 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A1059248164EE00682B64 /* Alamofire.framework */; };
-		A04A105F248164EE00682B64 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A04A1059248164EE00682B64 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A04A1060248164EE00682B64 /* RLottieBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A105A248164EE00682B64 /* RLottieBinding.framework */; };
 		A04A1061248164EE00682B64 /* RLottieBinding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A04A105A248164EE00682B64 /* RLottieBinding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A04A1062248164EE00682B64 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A105B248164EE00682B64 /* SDWebImage.framework */; };
@@ -57,7 +55,6 @@
 			files = (
 				A04A10A424817A5100682B64 /* SSticker.framework in Embed Frameworks */,
 				A04A1063248164EE00682B64 /* SDWebImage.framework in Embed Frameworks */,
-				A04A105F248164EE00682B64 /* Alamofire.framework in Embed Frameworks */,
 				A04A1061248164EE00682B64 /* RLottieBinding.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -79,7 +76,6 @@
 		A04A0FA724810A4400682B64 /* SecretSticker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecretSticker.h; sourceTree = "<group>"; };
 		A04A0FA824810A4400682B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A04A10252481613500682B64 /* SSticker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSticker.xcodeproj; path = SSticker/SSticker.xcodeproj; sourceTree = "<group>"; };
-		A04A1059248164EE00682B64 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = SSticker/Framework/Alamofire.framework; sourceTree = "<group>"; };
 		A04A105A248164EE00682B64 /* RLottieBinding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RLottieBinding.framework; path = SSticker/Framework/RLottieBinding.framework; sourceTree = "<group>"; };
 		A04A105B248164EE00682B64 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = SSticker/Framework/SDWebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,7 +87,6 @@
 			files = (
 				A04A10A324817A5100682B64 /* SSticker.framework in Frameworks */,
 				A04A1062248164EE00682B64 /* SDWebImage.framework in Frameworks */,
-				A04A105E248164EE00682B64 /* Alamofire.framework in Frameworks */,
 				A04A1060248164EE00682B64 /* RLottieBinding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,7 +97,6 @@
 		A00C106A247FC4E200A4172E = {
 			isa = PBXGroup;
 			children = (
-				A04A1059248164EE00682B64 /* Alamofire.framework */,
 				A04A105A248164EE00682B64 /* RLottieBinding.framework */,
 				A04A105B248164EE00682B64 /* SDWebImage.framework */,
 				A04A10252481613500682B64 /* SSticker.xcodeproj */,
