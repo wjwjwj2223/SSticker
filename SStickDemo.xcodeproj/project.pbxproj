@@ -20,6 +20,7 @@
 		A04A1063248164EE00682B64 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A04A105B248164EE00682B64 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A04A10A324817A5100682B64 /* SSticker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A102B2481613600682B64 /* SSticker.framework */; };
 		A04A10A424817A5100682B64 /* SSticker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A04A102B2481613600682B64 /* SSticker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0C0F8762487B619009A709A /* biaoqing.png in Resources */ = {isa = PBXBuildFile; fileRef = A0C0F8742487B619009A709A /* biaoqing.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		A04A10252481613500682B64 /* SSticker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSticker.xcodeproj; path = SSticker/SSticker.xcodeproj; sourceTree = "<group>"; };
 		A04A105A248164EE00682B64 /* RLottieBinding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RLottieBinding.framework; path = SSticker/Framework/RLottieBinding.framework; sourceTree = "<group>"; };
 		A04A105B248164EE00682B64 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = SSticker/Framework/SDWebImage.framework; sourceTree = "<group>"; };
+		A0C0F8742487B619009A709A /* biaoqing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = biaoqing.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		A00C1075247FC4E200A4172E /* SStickDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A0C0F8742487B619009A709A /* biaoqing.png */,
 				A00C1076247FC4E200A4172E /* AppDelegate.swift */,
 				A00C1078247FC4E200A4172E /* ViewController.swift */,
 				A00C1088247FC50B00A4172E /* StickerViewController.swift */,
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00C1081247FC4E300A4172E /* LaunchScreen.storyboard in Resources */,
+				A0C0F8762487B619009A709A /* biaoqing.png in Resources */,
 				A00C107E247FC4E300A4172E /* Assets.xcassets in Resources */,
 				A00C107C247FC4E200A4172E /* Main.storyboard in Resources */,
 			);

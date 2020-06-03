@@ -30,6 +30,7 @@
 		A04A10312481616F00682B64 /* YUV.h in Headers */ = {isa = PBXBuildFile; fileRef = A04A102F2481616F00682B64 /* YUV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A04A10A024816B2400682B64 /* StickerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A109F24816B2400682B64 /* StickerUtils.swift */; };
 		A04A10A2248171F400682B64 /* StickerTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A10A1248171F400682B64 /* StickerTimer.swift */; };
+		A0C0F8792487B891009A709A /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C0F8782487B891009A709A /* image.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		A04A10672481652500682B64 /* RLottieBinding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RLottieBinding.framework; path = Framework/RLottieBinding.framework; sourceTree = "<group>"; };
 		A04A109F24816B2400682B64 /* StickerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerUtils.swift; sourceTree = "<group>"; };
 		A04A10A1248171F400682B64 /* StickerTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerTimer.swift; sourceTree = "<group>"; };
+		A0C0F8782487B891009A709A /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				A04A0FF724815DDD00682B64 /* Core */,
 				A04A0FE024815DBE00682B64 /* SSticker.h */,
 				A04A0FE124815DBE00682B64 /* Info.plist */,
+				A0C0F8782487B891009A709A /* image.xcassets */,
 			);
 			path = SSticker;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C0F8792487B891009A709A /* image.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

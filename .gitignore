@@ -30,4 +30,4 @@ Index
 
 /Configuration/
 SSticker/Carthage/
-SSticker/Framework/
+*.framework

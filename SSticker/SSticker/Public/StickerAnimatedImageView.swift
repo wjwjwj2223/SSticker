@@ -68,6 +68,8 @@ public class StickerAnimatedImageView: UIImageView {
         
         if let place = placeHolder {
             self.image = place
+        } else {
+            self.image = UIImage(named: "biaoqing")
         }
         
         guard with.absoluteString.hasPrefix("http") else {
