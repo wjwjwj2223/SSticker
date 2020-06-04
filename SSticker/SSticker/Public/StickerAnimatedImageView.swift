@@ -11,21 +11,16 @@ import SDWebImage
 
 let decodeImageQueue = DispatchQueue(label: "decodeImageQueue")
 let firstFrameImageQueue = DispatchQueue(label: "firstFrameImageQueue", qos: DispatchQoS.userInitiated, attributes: .concurrent, autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency.workItem, target: nil)
-//let firstFrameImageQueue = DispatchQueue(label: "firstFrameImageQueue")
-//let generateCacheFileQueue = DispatchQueue(label: "generateCacheFileQueue", qos: DispatchQoS.background, attributes: .concurrent, autoreleaseFrequency: DispatchQueue.AutoreleaseFrequency.workItem, target: nil)
-let generateCacheFileQueue = DispatchQueue(label: "generateCacheFileQueue")
 
 
 public class StickerAnimatedImageView: UIImageView {
     
     let queue = decodeImageQueue
     let ffQueue = firstFrameImageQueue
-    let fileQueue = generateCacheFileQueue
     private let timer = Atomic<STimer?>(value: nil)
     private var url: String?
     private var currentLoadPath: String?
     private var currentPreViewPath: String?
-//    private var generateImageOperation: GenerateImageOperation?
     private var cachedData: Data?
     
     public override init(frame: CGRect) {
@@ -39,8 +34,6 @@ public class StickerAnimatedImageView: UIImageView {
     
     deinit {
         self.timer.swap(nil)?.invalidate()
-//        generateImageOperation?.cancel()
-//        generateImageOperation?.isFinished = true
         print("StickerAnimatedImageView -------- deinit")
     }
     
@@ -98,25 +91,18 @@ public class StickerAnimatedImageView: UIImageView {
             }
             
             if existShortData {
-                self.queue.async {
-                    self.playWithPath(shortPath)
-                }
+                self.playWithPath(shortPath)
                 return
             }
             
             downloadResourceWith(with) { [weak self] (origin , path) in
                 guard let self = self else {return}
                 guard self.url == origin else {return}
-                self.fileQueue.async { [weak self] in
-                    let optionData = try? Data(contentsOf: URL(fileURLWithPath: path), options: [.mappedRead])
-                    guard let pData = optionData else {return}
-                    guard let self = self else {return}
-                    experimentalConvertCompressedLottieToCombinedMp4(data: pData, size: CGSize(width: size.stickerWidth, height: size.stickerHeight), depath: shortPath, completion: { path in
-                        self.queue.async {
-                            self.playWithPath(path)
-                        }
-                    })
-                }
+                let optionData = try? Data(contentsOf: URL(fileURLWithPath: path), options: [.mappedRead])
+                guard let pData = optionData else {return}
+                experimentalConvertCompressedLottieToCombinedMp4(data: pData, size: CGSize(width: size.stickerWidth, height: size.stickerHeight), depath: shortPath, completion: { path in
+                    self.playWithPath(path)
+                })
             }
         }
     }

@@ -74,7 +74,6 @@ class StickerResource {
 //            fatalError("Can't load tgs files")
 //        }
         self.urls = [
-                "https://secretapp.azureedge.net/emojitgs/secret2/bt.gif",
             "https://secretapp.azureedge.net/emojitest/tgs_test1/2_1391391008142393345.tgs",
             "https://secretapp.azureedge.net/emojitest/tgs_test1/2_1391391008142393346.tgs",
             "https://secretapp.azureedge.net/emojitest/tgs_test1/2_1391391008142393347.tgs",

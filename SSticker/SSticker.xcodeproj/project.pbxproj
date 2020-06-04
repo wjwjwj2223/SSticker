@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A043F1C62482216B0093450F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A10652481652500682B64 /* Alamofire.framework */; };
 		A043F1C72482216B0093450F /* RLottieBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A10672481652500682B64 /* RLottieBinding.framework */; };
 		A043F1C82482216B0093450F /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A10642481652500682B64 /* SDWebImage.framework */; };
 		A043F1CC248244320093450F /* GenerateImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A043F1CB248244320093450F /* GenerateImageOperation.swift */; };
@@ -83,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A043F1C62482216B0093450F /* Alamofire.framework in Frameworks */,
 				A043F1C72482216B0093450F /* RLottieBinding.framework in Frameworks */,
 				A043F1C82482216B0093450F /* SDWebImage.framework in Frameworks */,
 				A04A1021248160C400682B64 /* libc++.tbd in Frameworks */,
