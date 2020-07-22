@@ -46,7 +46,8 @@ public class StickerAnimatedImageView: UIImageView {
     
     public func setSecretAnimation(_ with: URL,
                                    _ size: CGSize? = nil,
-                                   _ placeHolder: UIImage? = nil) {
+                                   _ placeHolder: UIImage? = nil,
+                                   _ playFirst: Bool = false) {
         
         guard self.url != with.absoluteString else {
             return
@@ -90,6 +91,11 @@ public class StickerAnimatedImageView: UIImageView {
                 self.playWithPath(shortPath, isFirstFrame: true)
             }
             
+            if playFirst && existShortData  {
+                self.playWithPath(shortPath, isFirstFrame: true)
+                return
+            }
+            
             if existShortData {
                 self.playWithPath(shortPath)
                 return
@@ -101,7 +107,7 @@ public class StickerAnimatedImageView: UIImageView {
                 let optionData = try? Data(contentsOf: URL(fileURLWithPath: path), options: [.mappedRead])
                 guard let pData = optionData else {return}
                 experimentalConvertCompressedLottieToCombinedMp4(data: pData, size: CGSize(width: size.stickerWidth, height: size.stickerHeight), depath: shortPath, completion: { path in
-                    self.playWithPath(path)
+                    self.playWithPath(path, isFirstFrame: playFirst)
                 })
             }
         }
