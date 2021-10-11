@@ -32,7 +32,7 @@ class StickerViewController: UIViewController {
         self.view.addSubview(btn)
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.frame = CGRect(x: 0, y: 100, width: view.bounds.width, height: view.bounds.height / 4)
+        collectionView.frame = CGRect(x: 0, y: 100, width: view.bounds.width, height: view.bounds.height / 2)
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.register(StickerCell.self, forCellWithReuseIdentifier: "StickerCellNode")
         self.view.addSubview(self.collectionView)
@@ -74,11 +74,11 @@ class StickerResource {
 //            fatalError("Can't load tgs files")
 //        }
         self.urls = [
-            "https://secretapp.azureedge.net/emojitest/tgs_test1/2_1391391008142393345.tgs",
-            "https://secretapp.azureedge.net/emojitest/tgs_test1/2_1391391008142393346.tgs",
-            "https://secretapp.azureedge.net/emojitest/tgs_test1/2_1391391008142393347.tgs",
-            "https://secretapp.azureedge.net/emojitest/tgs_test1/2_1391391008142393349.tgs",
-            "https://secretapp.azureedge.net/emojitest/tgs_test1/2_1391391008142393350.tgs"
+            "https://secretfile.blob.core.windows.net/emojitgs/Cat2O/Cat2O.tgs",
+            "https://secretfile.blob.core.windows.net/emojitgs/PaulOctopus/2_765673509304140441.tgs",
+            "https://secretfile.blob.core.windows.net/emojitgs/PaulOctopus/2_765673509304140442.tgs",
+            "https://secretfile.blob.core.windows.net/emojitgs/PaulOctopus/2_765673509304140443.tgs",
+            "https://secretfile.blob.core.windows.net/emojitgs/PaulOctopus/2_765673509304140439.tgs"
         ]
 //        self.urls = ["https://secretapp.azureedge.net/emojitgs/secret2/bt.gif",
 //        "https://secretapp.azureedge.net/emojitest/tgs_test1/2_1391391008142393345.tgs"]
