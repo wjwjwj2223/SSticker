@@ -26,9 +26,8 @@
 		A04A10312481616F00682B64 /* YUV.h in Headers */ = {isa = PBXBuildFile; fileRef = A04A102F2481616F00682B64 /* YUV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A04A10A024816B2400682B64 /* StickerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A109F24816B2400682B64 /* StickerUtils.swift */; };
 		A04A10A2248171F400682B64 /* StickerTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A10A1248171F400682B64 /* StickerTimer.swift */; };
+		A06D1AC82717D489004CDC61 /* SDWebImage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E32F0E27115413003E7225 /* SDWebImage.xcframework */; };
 		A0C0F8792487B891009A709A /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C0F8782487B891009A709A /* image.xcassets */; };
-		A0E32F0F27115413003E7225 /* SDWebImage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E32F0E27115413003E7225 /* SDWebImage.xcframework */; };
-		A0E32F1027115413003E7225 /* SDWebImage.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0E32F0E27115413003E7225 /* SDWebImage.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A0E32F1327115489003E7225 /* RLottieBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E32F1227115489003E7225 /* RLottieBinding.framework */; };
 		A0F36F66258B6B1C008F9630 /* StickerDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A0FFF24815DF800682B64 /* StickerDownloader.swift */; };
 /* End PBXBuildFile section */
@@ -42,20 +41,6 @@
 			remoteInfo = SSticker;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A0E32F1127115413003E7225 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A0E32F1027115413003E7225 /* SDWebImage.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A043F1CB248244320093450F /* GenerateImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateImageOperation.swift; sourceTree = "<group>"; };
@@ -91,8 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0E32F0F27115413003E7225 /* SDWebImage.xcframework in Frameworks */,
 				A04A1021248160C400682B64 /* libc++.tbd in Frameworks */,
+				A06D1AC82717D489004CDC61 /* SDWebImage.xcframework in Frameworks */,
 				A0E32F1327115489003E7225 /* RLottieBinding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,7 +212,6 @@
 				A04A0FD924815DBE00682B64 /* Sources */,
 				A04A0FDA24815DBE00682B64 /* Frameworks */,
 				A04A0FDB24815DBE00682B64 /* Resources */,
-				A0E32F1127115413003E7225 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,7 +247,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "王杰";
 				TargetAttributes = {
 					A04A0FDC24815DBE00682B64 = {
@@ -379,6 +363,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -443,6 +428,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -479,10 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				"ARCHS[sdk=iphoneos*]" = (
-					arm64,
-					armv7,
-				);
+				"ARCHS[sdk=iphoneos*]" = arm64;
 				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -492,7 +475,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -501,6 +483,7 @@
 				);
 				INFOPLIST_FILE = SSticker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -520,10 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				"ARCHS[sdk=iphoneos*]" = (
-					arm64,
-					armv7,
-				);
+				"ARCHS[sdk=iphoneos*]" = arm64;
 				"ARCHS[sdk=iphonesimulator*]" = x86_64;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -533,7 +513,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -542,6 +521,7 @@
 				);
 				INFOPLIST_FILE = SSticker/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
