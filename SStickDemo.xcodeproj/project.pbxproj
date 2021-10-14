@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,36 +14,12 @@
 		A00C1081247FC4E300A4172E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00C107F247FC4E300A4172E /* LaunchScreen.storyboard */; };
 		A00C1089247FC50B00A4172E /* StickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C1088247FC50B00A4172E /* StickerViewController.swift */; };
 		A00C108D247FC53F00A4172E /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C108C247FC53F00A4172E /* StickerCell.swift */; };
-		A04A1060248164EE00682B64 /* RLottieBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A105A248164EE00682B64 /* RLottieBinding.framework */; };
-		A04A1061248164EE00682B64 /* RLottieBinding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A04A105A248164EE00682B64 /* RLottieBinding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A04A10A324817A5100682B64 /* SSticker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04A102B2481613600682B64 /* SSticker.framework */; };
-		A04A10A424817A5100682B64 /* SSticker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A04A102B2481613600682B64 /* SSticker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A06D1ADC2717E017004CDC61 /* SDWebImage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06D1ADB2717E017004CDC61 /* SDWebImage.xcframework */; };
+		A06D1ADD2717E017004CDC61 /* SDWebImage.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A06D1ADB2717E017004CDC61 /* SDWebImage.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A06D1ADF2717E024004CDC61 /* SSticker.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06D1ADE2717E024004CDC61 /* SSticker.xcframework */; };
+		A06D1AE02717E024004CDC61 /* SSticker.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A06D1ADE2717E024004CDC61 /* SSticker.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A0C0F8762487B619009A709A /* biaoqing.png in Resources */ = {isa = PBXBuildFile; fileRef = A0C0F8742487B619009A709A /* biaoqing.png */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A04A102A2481613600682B64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A04A10252481613500682B64 /* SSticker.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A04A0FDD24815DBE00682B64;
-			remoteInfo = SSticker;
-		};
-		A04A102C2481613600682B64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A04A10252481613500682B64 /* SSticker.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A04A0FE624815DBE00682B64;
-			remoteInfo = SStickerTests;
-		};
-		A04A10A524817A5100682B64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A04A10252481613500682B64 /* SSticker.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A04A0FDC24815DBE00682B64;
-			remoteInfo = SSticker;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A04A1036248161B500682B64 /* Embed Frameworks */ = {
@@ -52,8 +28,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A04A10A424817A5100682B64 /* SSticker.framework in Embed Frameworks */,
-				A04A1061248164EE00682B64 /* RLottieBinding.framework in Embed Frameworks */,
+				A06D1ADD2717E017004CDC61 /* SDWebImage.xcframework in Embed Frameworks */,
+				A06D1AE02717E024004CDC61 /* SSticker.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,8 +49,8 @@
 		A00C10AC247FDBA100A4172E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		A04A0FA724810A4400682B64 /* SecretSticker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecretSticker.h; sourceTree = "<group>"; };
 		A04A0FA824810A4400682B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A04A10252481613500682B64 /* SSticker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSticker.xcodeproj; path = SSticker/SSticker.xcodeproj; sourceTree = "<group>"; };
-		A04A105A248164EE00682B64 /* RLottieBinding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RLottieBinding.framework; path = SSticker/Framework/RLottieBinding.framework; sourceTree = "<group>"; };
+		A06D1ADB2717E017004CDC61 /* SDWebImage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDWebImage.xcframework; path = SSticker/Framework/SDWebImage.xcframework; sourceTree = "<group>"; };
+		A06D1ADE2717E024004CDC61 /* SSticker.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SSticker.xcframework; path = SSticker/Carthage/Build/SSticker.xcframework; sourceTree = "<group>"; };
 		A0C0F8742487B619009A709A /* biaoqing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = biaoqing.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,8 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A04A10A324817A5100682B64 /* SSticker.framework in Frameworks */,
-				A04A1060248164EE00682B64 /* RLottieBinding.framework in Frameworks */,
+				A06D1ADC2717E017004CDC61 /* SDWebImage.xcframework in Frameworks */,
+				A06D1ADF2717E024004CDC61 /* SSticker.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +70,6 @@
 		A00C106A247FC4E200A4172E = {
 			isa = PBXGroup;
 			children = (
-				A04A105A248164EE00682B64 /* RLottieBinding.framework */,
-				A04A10252481613500682B64 /* SSticker.xcodeproj */,
 				A00C1075247FC4E200A4172E /* SStickDemo */,
 				A04A0FA624810A4400682B64 /* SecretSticker */,
 				A00C1074247FC4E200A4172E /* Products */,
@@ -130,6 +104,8 @@
 		A00C10AB247FDBA100A4172E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A06D1ADE2717E024004CDC61 /* SSticker.xcframework */,
+				A06D1ADB2717E017004CDC61 /* SDWebImage.xcframework */,
 				A00C10AC247FDBA100A4172E /* libc++.tbd */,
 			);
 			name = Frameworks;
@@ -142,15 +118,6 @@
 				A04A0FA824810A4400682B64 /* Info.plist */,
 			);
 			path = SecretSticker;
-			sourceTree = "<group>";
-		};
-		A04A10262481613500682B64 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A04A102B2481613600682B64 /* SSticker.framework */,
-				A04A102D2481613600682B64 /* SStickerTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,7 +135,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A04A10A624817A5100682B64 /* PBXTargetDependency */,
 			);
 			name = SStickDemo;
 			productName = SStickDemo;
@@ -202,35 +168,12 @@
 			mainGroup = A00C106A247FC4E200A4172E;
 			productRefGroup = A00C1074247FC4E200A4172E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = A04A10262481613500682B64 /* Products */;
-					ProjectRef = A04A10252481613500682B64 /* SSticker.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				A00C1072247FC4E200A4172E /* SStickDemo */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		A04A102B2481613600682B64 /* SSticker.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SSticker.framework;
-			remoteRef = A04A102A2481613600682B64 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A04A102D2481613600682B64 /* SStickerTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SStickerTests.xctest;
-			remoteRef = A04A102C2481613600682B64 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A00C1071247FC4E200A4172E /* Resources */ = {
@@ -259,14 +202,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A04A10A624817A5100682B64 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SSticker;
-			targetProxy = A04A10A524817A5100682B64 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A00C107A247FC4E200A4172E /* Main.storyboard */ = {
