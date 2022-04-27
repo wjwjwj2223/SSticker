@@ -26,7 +26,7 @@
 		A04A10312481616F00682B64 /* YUV.h in Headers */ = {isa = PBXBuildFile; fileRef = A04A102F2481616F00682B64 /* YUV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A04A10A024816B2400682B64 /* StickerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A109F24816B2400682B64 /* StickerUtils.swift */; };
 		A04A10A2248171F400682B64 /* StickerTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A10A1248171F400682B64 /* StickerTimer.swift */; };
-		A06D1AC82717D489004CDC61 /* SDWebImage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E32F0E27115413003E7225 /* SDWebImage.xcframework */; };
+		A08376102819A93E00567A08 /* SDWebImage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A083760F2819A93E00567A08 /* SDWebImage.xcframework */; };
 		A0C0F8792487B891009A709A /* image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C0F8782487B891009A709A /* image.xcassets */; };
 		A0E32F1327115489003E7225 /* RLottieBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E32F1227115489003E7225 /* RLottieBinding.framework */; };
 		A0F36F66258B6B1C008F9630 /* StickerDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A0FFF24815DF800682B64 /* StickerDownloader.swift */; };
@@ -66,6 +66,8 @@
 		A04A102F2481616F00682B64 /* YUV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUV.h; sourceTree = "<group>"; };
 		A04A109F24816B2400682B64 /* StickerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerUtils.swift; sourceTree = "<group>"; };
 		A04A10A1248171F400682B64 /* StickerTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerTimer.swift; sourceTree = "<group>"; };
+		A083760B2819A93300567A08 /* SDWebImageWebPCoder.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDWebImageWebPCoder.xcframework; path = ../../../Build/iOS/SDWebImageWebPCoder.xcframework; sourceTree = "<group>"; };
+		A083760F2819A93E00567A08 /* SDWebImage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDWebImage.xcframework; path = ../../../Build/iOS/SDWebImage.xcframework; sourceTree = "<group>"; };
 		A0C0F8782487B891009A709A /* image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = image.xcassets; sourceTree = "<group>"; };
 		A0E32F0E27115413003E7225 /* SDWebImage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDWebImage.xcframework; path = Framework/SDWebImage.xcframework; sourceTree = "<group>"; };
 		A0E32F1227115489003E7225 /* RLottieBinding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RLottieBinding.framework; path = Framework/RLottieBinding.framework; sourceTree = "<group>"; };
@@ -77,7 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A04A1021248160C400682B64 /* libc++.tbd in Frameworks */,
-				A06D1AC82717D489004CDC61 /* SDWebImage.xcframework in Frameworks */,
+				A08376102819A93E00567A08 /* SDWebImage.xcframework in Frameworks */,
 				A0E32F1327115489003E7225 /* RLottieBinding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +168,8 @@
 		A04A101F248160C400682B64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A083760F2819A93E00567A08 /* SDWebImage.xcframework */,
+				A083760B2819A93300567A08 /* SDWebImageWebPCoder.xcframework */,
 				A0E32F1227115489003E7225 /* RLottieBinding.framework */,
 				A0E32F0E27115413003E7225 /* SDWebImage.xcframework */,
 				A04A1020248160C400682B64 /* libc++.tbd */,
@@ -471,6 +475,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9TRATUWJ7G;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -509,6 +514,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 9TRATUWJ7G;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
